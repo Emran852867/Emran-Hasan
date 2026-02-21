@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 February · International Mother Language Day</title>
+    <!-- Font Awesome 6 (free) for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f9f2e7 0%, #fff4e5 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #2d2a24;
+        }
+
+        /* header with bengali and unesco touch */
+        .header {
+            background: #1b3b4f;
+            background-image: radial-gradient(circle at 10% 30%, #235b6e 0%, #0a2e3f 100%);
+            color: white;
+            padding: 2rem 1.5rem 1.8rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 20, 10, 0.3);
+            border-bottom: 5px solid #e7b42c;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0 #1d5a6d;
+        }
+
+        .header h1 i {
+            color: #f5c84e;
+            margin-right: 12px;
+        }
+
+        .header .subhead {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            font-weight: 300;
+            background: rgba(255,255,240,0.15);
+            display: inline-block;
+            padding: 0.3rem 2rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        .header .bengali {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            font-family: 'Noto Sans Bengali', 'Hind Siliguri', 'Segoe UI', sans-serif;
+        }
+
+        /* main container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* intro card */
+        .intro-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border-radius: 40px 40px 40px 0;
+            padding: 2.2rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 30px -10px rgba(98, 60, 20, 0.2);
+            border: 1px solid #ffe6c0;
+            border-left: 12px solid #c7493c;
+        }
+
+        .intro-text {
+            font-size: 1.35rem;
+            line-height: 1.6;
+            font-weight: 400;
+            color: #2c3a41;
+        }
+
+        .intro-text strong {
+            color: #b13e2f;
+            font-weight: 600;
+        }
+
+        .intro-text i {
+            color: #1f6e8c;
+        }
+
+        .quote-box {
+            margin-top: 1.8rem;
+            background: #ebddd1;
+            padding: 1.2rem 2rem;
+            border-radius: 100px 20px 100px 20px;
+            display: inline-block;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.25rem;
+            border: 2px dashed #ab6f51;
+        }
+
+        /* grid section (three pillars) */
+        .grid-three {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .pillar {
+            background: white;
+            border-radius: 30px 10px 30px 10px;
+            padding: 2rem 1.5rem 1.8rem;
+            box-shadow: 10px 12px 0 #cdb89b;
+            transition: transform 0.2s ease;
+            border: 1px solid #e2cfb5;
+        }
+
+        .pillar:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 14px 16px 0 #b59773;
+        }
+
+        .pillar-icon {
+            font-size: 2.6rem;
+            color: #bc4e3a;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar h3 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #174e5c;
+            border-bottom: 3px solid #f1cf9b;
+            padding-bottom: 8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .pillar p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #2f3d40;
+        }
+
+        .pillar .highlight {
+            background: #fee9d6;
+            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* language diversity map (visual) */
+        .diversity-section {
+            background: #274854;
+            background: linear-gradient(112deg, #1f4a5b 0%, #12424f 100%);
+            border-radius: 70px 10px 70px 10px;
+            padding: 2.2rem 2rem;
+            color: #fbf2e0;
+            margin: 3rem 0 2.5rem;
+            box-shadow: inset 0 -2px 10px #abc0c9, 0 15px 20px -10px #0b2b30;
+        }
+
+        .diversity-section h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            border-left: 10px solid #fccd7c;
+            padding-left: 20px;
+            margin-bottom: 1.8rem;
+        }
+
+        .language-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem 1.8rem;
+        }
+
+        .lang-item {
+            background: rgba(255,255,235,0.1);
+            backdrop-filter: blur(2px);
+            padding: 0.5rem 1.3rem;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            border: 1px solid #eac48b;
+            color: #ffefcf;
+            transition: 0.15s;
+            font-weight: 500;
+            box-shadow: 0 5px 0 #0f303b;
+        }
+
+        .lang-item:hover {
+            background: #e1b87b;
+            color: #102a32;
+            transform: scale(1.05);
+            border-color: white;
+        }
+
+        /* timeline / historic moment */
+        .timeline-block {
+            background: #fffbf2;
+            border-radius: 30px;
+            padding: 2rem 2rem;
+            margin: 3rem 0;
+            border: 1px solid #f3d2af;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        .timeline-block::before {
+            content: "২১ ফেব্রুয়ারি";
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: #c7493c;
+            color: white;
+            font-size: 1.3rem;
+            padding: 0.2rem 2rem;
+            border-radius: 60px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .timeline-title {
+            font-size: 2rem;
+            color: #0d4554;
+            margin: 1.2rem 0 1.8rem 0;
+        }
+
+        .event-list {
+            list-style: none;
+        }
+
+        .event-list li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            padding-left: 2rem;
+            border-left: 5px solid #e7b42c;
+        }
+
+        .event-list li strong {
+            color: #a33e2b;
+        }
+
+        .shaheed-minar {
+            font-size: 1.5rem;
+            background: #eddac6;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            border: 2px solid #b4824a;
+            color: #232323;
+        }
+
+        /* footer */
+        .footer {
+            background: #1b332b;
+            color: #eee6d8;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-top: 6px solid #d8a649;
+        }
+
+        .footer .footer-icons a {
+            color: #ffda99;
+            margin: 0 12px;
+            font-size: 1.8rem;
+            transition: 0.2s;
+        }
+
+        .footer .footer-icons a:hover {
+            color: #e9b44c;
+        }
+
+        .footer small {
+            display: block;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* responsive touches */
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2rem; }
+            .header .bengali { font-size: 1.4rem; }
+            .intro-card { padding: 1.5rem; }
+            .quote-box { font-size: 1rem; }
+        }
+
+        /* fake bengali font fallback */
+        .bengali {
+            font-family: 'Noto Sans Bengali', 'Hind Siliguri', 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-globe-asia"></i> 21 February</h1>
+        <div class="subhead">International Mother Language Day</div>
+        <div class="bengali">আন্তর্জাতিক মাতৃভাষা দিবস</div>
+        <div style="margin-top: 1rem; font-size: 1.1rem; background: #efb13b; color: #1a3038; display: inline-block; padding: 0.2rem 2rem; border-radius: 30px; font-weight: 600;">UNESCO · since 1999</div>
+    </header>
+
+    <div class="container">
+        <!-- introduction section -->
+        <div class="intro-card">
+            <div class="intro-text">
+                <i class="fas fa-quote-left" style="margin-right: 8px; color:#c7493c;"></i>
+                <strong>International Mother Language Day</strong> is observed worldwide on <strong>21 February</strong> 
+                to promote linguistic and cultural diversity and multilingualism. The date recalls the 1952 
+                language movement in <i>Bangladesh</i> (then East Pakistan), where students in Dhaka sacrificed 
+                their lives to protect their mother tongue <strong>Bengali</strong>.
+                <i class="fas fa-quote-right" style="margin-left: 8px; color:#c7493c;"></i>
+            </div>
+            <div class="quote-box">
+                <i class="fas fa-heart" style="color:#b3412c;"></i> 
+                "Languages are the most powerful instruments of preserving and developing our tangible and intangible heritage."
+            </div>
+        </div>
+
+        <!-- three core pillars -->
+        <div class="grid-three">
+            <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-book-open"></i></div>
+                <h3>heritage</h3>
+                <p>Every language carries a unique worldview. 40% of the world's population lacks access to education in their own language. Protecting mother tongues safeguards ancestral wisdom.</p>
+                <span class="highlight">7,000+ languages worldwide</span>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>dignity</h3>
+                <p>The right to speak, learn, and express in one’s mother language is a fundamental right. It empowers minorities and indigenous communities.</p>
+                <span class="highlight">#MotherLanguageDay</span>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-future"></i></div>
+                <h3>future</h3>
+                <p>Multilingual societies thrive. Technology and education in local languages unlock opportunities and preserve linguistic diversity for generations.</p>
+                <span class="highlight">SDG · inclusion</span>
+            </div>
+        </div>
+
+        <!-- language diversity visual -->
+        <div class="diversity-section">
+            <h2><i class="fas fa-language" style="margin-right: 15px;"></i> voices of the world</h2>
+            <div class="language-cloud">
+                <span class="lang-item">বাংলা (Bengali)</span>
+                <span class="lang-item">Español</span>
+                <span class="lang-item">中文</span>
+                <span class="lang-item">हिन्दी</span>
+                <span class="lang-item">العربية</span>
+                <span class="lang-item">Português</span>
+                <span class="lang-item">Русский</span>
+                <span class="lang-item">Français</span>
+                <span class="lang-item">Kiswahili</span>
+                <span class="lang-item">Deutsch</span>
+                <span class="lang-item">日本語</span>
+                <span class="lang-item">Yorùbá</span>
+                <span class="lang-item">Quechua</span>
+                <span class="lang-item">Aymara</span>
+                <span class="lang-item">Inuktitut</span>
+                <span class="lang-item"> Māori</span>
+                <span class="lang-item">Gaeilge</span>
+                <span class="lang-item">isiZulu</span>
+                <span class="lang-item">Bahasa</span>
+                <span class="lang-item">नेपाली</span>
+                <span class="lang-item">አማርኛ</span>
+                <span class="lang-item">Soomaali</span>
+            </div>
+            <p style="text-align: center; margin-top: 2.5rem; font-size: 1.1rem; background: #2d5b6b; padding: 0.7rem; border-radius: 40px;">
+                <i class="fas fa-microphone-alt"></i>  At least 43% of estimated 7000 languages are endangered.
+            </p>
+        </div>
+
+        <!-- historical timeline (1952) and shahid minar -->
+        <div class="timeline-block">
+            <h3 class="timeline-title"><i class="fas fa-calendar-alt" style="color:#c7493c;"></i> 1952 language movement</h3>
+            <ul class="event-list">
+                <li><strong>21 February 1952</strong> – Students at the University of Dhaka protest for Bengali to be a state language of Pakistan.</li>
+                <li><strong>Salam, Barkat, Rafiq, Jabbar</strong> –几名年轻人牺牲于警察开枪之下, becoming martyrs for their mother tongue.</li>
+                <li><strong>1956</strong> – Bengali gains official status in Pakistan (later Bangladesh).</li>
+                <li><strong>1999</strong> – UNESCO proclaims 21 February as International Mother Language Day.</li>
+            </ul>
+            <div class="shaheed-minar">
+                <i class="fas fa-monument" style="margin-right: 15px;"></i> শহীদ মিনার (Shaheed Minar) –  central monument in Dhaka, symbol of language rights.
+            </div>
+        </div>
+
+        <!-- why it matters today (extra row) -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; background: #fff; border-radius: 80px 20px 80px 20px; padding: 2rem; border: 2px solid #f2c997;">
+            <div style="flex: 1; min-width: 200px;">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 4rem; color: #1d6d7c;"></i>
+            </div>
+            <div style="flex: 5;">
+                <h3 style="font-size: 2rem; color: #223d44;"> multilingual education matters</h3>
+                <p style="font-size: 1.2rem;">Learning in mother language boosts inclusion, literacy, and academic results. UNESCO calls for embracing linguistic diversity from early childhood.</p>
+            </div>
+        </div>
+
+        <!-- simple share / hashtag -->
+        <div style="text-align: center; margin: 3rem 0 1rem;">
+            <span style="background: #174e5c; color: #ffd98c; padding: 0.8rem 2.5rem; border-radius: 60px; font-size: 2rem; font-weight: 600; display: inline-block; box-shadow: 0 10px 0 #0a2f3a;">
+                #MotherLanguageDay
+            </span>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fas fa-heart" style="color: #f1b159;"></i>  multilingualism is humanity’s heritage</p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <small>
+                © 21 February — International Mother Language Day.  <br>
+                Inspired by the spirit of 1952, Bangladesh & global linguistic diversity. 
+                All voices welcome.
+            </small>
+        </div>
+    </footer>
+</body>
+</html>
